@@ -101,3 +101,17 @@ npm test         # runs the full test suite
 - **Fixed-window rate limiting over sliding-window/token-bucket**: simpler
   to reason about and sufficient for this service's traffic profile;
   noted as a tradeoff rather than claimed as the "best" approach.
+
+
+## Live Deployment
+
+🔗 **Live URL**: https://page-pulse-g2gp.onrender.com
+
+Try it:
+```bash
+curl -X POST https://page-pulse-g2gp.onrender.com/audit \
+  -H "Content-Type: application/json" \
+  -d '{"url": "https://example.com"}'
+```
+
+> **Note**: This is deployed on Render's free tier, which spins down after ~15 minutes of inactivity. The first request after idle time may take 30–50 seconds while the service wakes up — subsequent requests are fast.
