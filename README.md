@@ -115,3 +115,18 @@ curl -X POST https://page-pulse-g2gp.onrender.com/audit \
 ```
 
 > **Note**: This is deployed on Render's free tier, which spins down after ~15 minutes of inactivity. The first request after idle time may take 30–50 seconds while the service wakes up — subsequent requests are fast.
+
+## AI Usage Disclosure
+
+I used Claude (Anthropic) as a pair-programming and debugging assistant
+throughout this task:
+- Scaffolding the initial project structure (Express routes, middleware)
+- Debugging PowerShell/curl quoting issues during local testing
+- Reviewing and refining error handling, caching, and rate-limiting logic
+- Drafting README documentation and API contract formatting
+- Walking through GitHub push and Render deployment steps
+
+All architectural decisions (in-memory cache vs Redis, fixed-window vs
+token-bucket rate limiting, timeout strategy) were made and understood by
+me, and I verified every endpoint manually via curl/Invoke-RestMethod
+before and after deployment.
