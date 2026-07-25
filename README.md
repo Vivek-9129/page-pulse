@@ -124,7 +124,7 @@ throughout this task:
 - Debugging PowerShell/curl quoting issues during local testing
 - Reviewing and refining error handling, caching, and rate-limiting logic
 - Drafting README documentation and API contract formatting
-- Walking through GitHub push and Render deployment steps
+
 
 All architectural decisions (in-memory cache vs Redis, fixed-window vs
 token-bucket rate limiting, timeout strategy) were made and understood by
